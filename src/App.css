@@ -1,0 +1,93 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  font-family: 'Lato', sans-serif;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+.cta-button {
+  font-family: 'Playfair Display', serif;
+  background-color: #ff6f61;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #d9534f;
+}
+
+.footer {
+  background-color: #f5f5dc;
+  color: #333333;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Ensure the entire app layout takes full height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content-container {
+  flex: 1; /* Pushes footer to the bottom if content is short */
+}
+
+/* Footer styles from Footer.css */
+.footer-container {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffc107;
+}
+
+.footer-container a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-container a:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  background-color: #23272b;
+  font-size: 0.875rem;
+  padding: 10px 0;
+  text-align: center;
+}

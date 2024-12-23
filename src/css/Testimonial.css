@@ -1,0 +1,45 @@
+/* Testimonial.css */
+
+.testimonial-container {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* margin-top: 0px; */
+}
+
+ h1 {
+ /* Space below the heading */
+  text-align: center; /* Align text inside the h1 */
+}
+
+.testimonial-card {
+  max-width: 400px;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Drop shadow for a modern look */
+  background: #ffffff; /* White background for the card */
+}
+
+.card-img-top {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #007bff; /* Optional: border color around image */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333333; /* Darker text color for contrast */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666666; /* Subtle text color */
+  margin-top: 10px;
+}
