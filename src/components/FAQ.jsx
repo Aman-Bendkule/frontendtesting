@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "../css/FAQ.css";
 
 const FAQ = () => {
@@ -6,28 +6,28 @@ const FAQ = () => {
 
   const questions = [
     {
-      question: "What is this service?",
-      answer: "This service provides information and tools to help you organize events, manage tasks, and communicate effectively.",
+      question: "Assured Support & Problem Resolution?",
+      answer: "Our customer support is available via call, SMS, or WhatsApp at any time. You’ll receive prompt and satisfactory answers to any queries or issues regarding your Lonavala Sightseeing Cab trip. Our coordination process ensures effective problem resolution for a seamless experience.",
     },
     {
-      question: "How do I create an event?",
-      answer: "To create an event, click on the 'Create Event' button and fill in the necessary details. You can add an event description, date, time, and location.",
+      question: "Instant Confirmation",
+      answer: "Experience an advanced cab service with fast technology. Our upgraded system ensures instant confirmation for Lonavala Sightseeing Cabs, enhancing your booking experience.",
     },
     {
-      question: "Can I invite guests to the event?",
-      answer: "Yes, you can invite guests by adding their email addresses during the event creation process. Guests will receive an invitation email with details about the event.",
+      question: "Family Verified Drivers",
+      answer: "Rest assured with our trustworthy drivers, chosen based on good records, experience, and excellent reputation within the industry. We know our drivers and their families, ensuring the most reliable service.",
     },
     {
       question: "What payment methods are accepted?",
-      answer: "We accept all major credit cards including Visa, MasterCard, American Express, and Discover.",
+      answer: "We accept Cash Only.",
     },
     {
-      question: "Is there a mobile app available?",
-      answer: "Yes, we offer a mobile app for both iOS and Android devices that allows you to manage events and tasks on the go.",
+      question: "100% Booking Assurance",
+      answer: "Book with confidence, knowing that once you reserve a cab through our website, you will 100% get the cab. If it’s available, you can book it without any worries.",
     },
     {
-      question: "How do I get support?",
-      answer: "You can get support by reaching out via the contact form on our website or by emailing us at support@ourservice.com.",
+      question: "Most Affordable Lonavala Sightseeing Cab",
+      answer: "Arohi Travels Services offers direct booking, eliminating extra commissions and providing the best lonavala sightseeing packages at competitive charges.",
     },
   ];
 

@@ -12,7 +12,11 @@ import ContactForm from './components/ContactForm';
 import ScrollToTop from './components/ScrollToTop';
 import FAQ from './components/FAQ';
 import TravelInfo from './components/TravelInfo';
-import '@fortawesome/fontawesome-free/css/all.min.css';import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import './App.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Services from './components/Services';
+import Enquire from './components/Enquire';
 
 
 function App() {
@@ -29,17 +33,19 @@ function App() {
               element={
                 <>
                   <Hero />
+                  <Services/>
                   <Destination />
                   <TravelInfo/>
                   <Packages/>
                   <Testimonial/>
-                  <ContactForm/>
                   <FAQ/>
+                  <ContactForm/>
                 </>
               }
             />
             <Route path="/rent-car" element={<RentCar />} />
             <Route path="/about" element={<About />} />
+            <Route path="/enquire" element={<Enquire />} />
           </Routes>
         </div>
         <ScrollToTop/>

@@ -4,19 +4,29 @@ import "../css/Destination.css"; // Ensure this CSS file exists
 
 const destinations = [
   {
-    img: 'https://images.unsplash.com/photo-1732058824460-d89cb7b4a38f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8',
-    title: 'Explore Beautiful Beaches',
-    description: 'Discover the serene beauty and tranquility of pristine beaches.',
+    img: 'https://lonavalataxiservice.com/wp-content/uploads/2023/06/lions-pont.webp',
+    title: 'Lions Point',
+    description: 'Panoramic hilltop vantage point renowned for its breathtaking valley views, serene sunrises and sunsets, and lush monsoon ambiance.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1721641843496-3c8c60eab024?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D',
-    title: 'Discover Mountain Trails',
-    description: 'Hike through breathtaking trails with stunning views.',
+    img: 'https://lonavalataxiservice.com/wp-content/uploads/2023/06/shooting-point.webp',
+    title: 'Shooting Point',
+    description: 'This point offers breathtaking views of the river valley and aerial view of the Rajmachi Fort. This place comes alive...',
   },
   {
-    img: 'https://images.unsplash.com/photo-1731412895386-f243767a59c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D',
-    title: 'Relax at Luxurious Resorts',
-    description: 'Enjoy a perfect getaway at world-class resorts.',
+    img: 'https://lonavalataxiservice.com/wp-content/uploads/2023/06/tigers-leap.webp',
+    title: 'Tiger’s Leap',
+    description: 'One should visit and explore the place. There are many place like Tigers leap one should visit.',
+  },
+  {
+    img: 'https://lonavalataxiservice.com/wp-content/uploads/2023/06/Bhaja-Caves.webp',
+    title: 'Bhaja Caves',
+    description: 'Amazing hand carved stone caves by Buddhist Monks some 5000yrs ago.',
+  },
+  {
+    img: 'https://lonavalataxiservice.com/wp-content/uploads/2023/06/Sunset-Point.webp',
+    title: 'Sunset Point',
+    description: 'This is the highest point in lonavala and is very famous for sunset point. you will find many vendors serving tea and snacks there.',
   },
 ];
 

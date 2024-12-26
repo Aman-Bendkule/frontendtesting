@@ -1,43 +1,82 @@
-.moving-icons {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  justify-content: center;
+.services-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+  margin-bottom: 30px;
+  /* color: #007bff; */
+}
+
+/* Staggered Grid for Unique Layout */
+.services-staggered-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 150px;
-  text-align: center;
-  transition: transform 0.5s ease-in-out;
+.service-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
 }
 
-.icon i {
-  font-size: 40px;
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlighted cards for a unique effect */
+.service-card.highlight {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #ffffff;
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  color: inherit; /* Adapts to the highlighted card */
+}
+
+.service-title {
+  font-size: 1.75rem;
+  font-weight: 600;
   margin-bottom: 10px;
+  color: inherit; /* Adapts to the highlighted card */
 }
 
+.service-description {
+  font-size: 1rem;
+  color: inherit; /* Adapts to the highlighted card */
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-  .icon {
-    width: 120px;
+  .services-heading {
+    font-size: 2rem;
   }
 
-  .icon i {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .icon {
-    width: 90px;
+  .service-card {
+    padding: 20px;
   }
 
-  .icon i {
-    font-size: 25px;
+  .service-icon {
+    font-size: 3rem;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
   }
 }

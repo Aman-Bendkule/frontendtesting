@@ -7,7 +7,7 @@ const TravelInfo = () => {
         <h2 className="travel-info-title">Hassle-Free and Comfortable Travel</h2>
         <p className="travel-info-description">
           We are currently based in Lonavala and offer high-class cab services to
-          different nearby locations and all the major cities of Pan India. In
+          different nearby locations. In
           our fleet, you will find all the trending taxi models and comfort cars.
         </p>
       </div>

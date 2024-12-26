@@ -1,70 +1,104 @@
-.head{
+/* .head {
   color: #007bff;
-}
+} */
+
 .packages-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.packages-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centers cards horizontally */
+}
+
+.packages-container .col-lg-4,
+.packages-container .col-md-6 {
+  display: flex;
+  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+  max-width: calc(33.33% - 20px);
+}
+
+.package-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  height: 100%; /* Ensures cards are equal height */
+  display: flex;
+  flex-direction: column;
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Ensures consistent height for content */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.rates-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Center the button */
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .packages-container .col-lg-4,
+  .packages-container .col-md-6 {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+    max-width: calc(50% - 20px);
   }
-  
-  .package-card {
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .packages-container .col-lg-4,
+  .packages-container .col-md-6 {
+    flex: 1 1 100%; /* 1 card per row on mobile */
+    max-width: 100%;
   }
-  
-  .package-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .card-text {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .rates-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #007bff;
-    margin-top: 10px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul li {
-    font-size: 0.9rem;
-    color: #444;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 768px) {
-    .package-card {
-      margin-bottom: 20px;
-    }
-  }
-  
+}
