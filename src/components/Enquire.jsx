@@ -1,16 +1,37 @@
-import React, { useState } from "react";
-import '../css/Enquire.css'
+import { useState } from "react";
+import '../css/Enquire.css';
+
 const Enquire = () => {
   const [tripType, setTripType] = useState("");
   const [carType, setCarType] = useState("");
   const [date, setDate] = useState("");
   const [name, setName] = useState("");
   const [contactNo, setContactNo] = useState("");
-  
-  // WhatsApp phone number
-  const phoneNumber = "919028874741"; // Replace with your own WhatsApp number
 
-  // Handle form submission and generate WhatsApp message
+  const tripTypes = [
+    "One Way Cab",
+    "Car Rent",
+    "Tour Packages",
+    "Hotel Bookings",
+    "Airport Transfer",
+    "Local City Taxi",
+  ];
+
+  const carTypes = [
+    "Ertiga",
+    "Swift Desire",
+    "Innova Crysta",
+    "Mahindra Xaylo",
+    "Tavera",
+    "Scorpio",
+    "Tempo Travels",
+    "Seventeen Seater",
+    "Twenty Seater",
+    "Thirty Two Seater",
+    "Fifty Seater Bus",
+  ];
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -25,14 +46,8 @@ const Enquire = () => {
       Please assist me with the details.
     `;
 
-    // Encode the message for URL compatibility
-    const encodedMessage = encodeURIComponent(message);
-
-    // Generate WhatsApp URL
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp
-    window.open(whatsappUrl, "_blank");
+    // Log message for demonstration (remove or replace with desired action)
+    console.log(message);
   };
 
   return (
@@ -41,25 +56,35 @@ const Enquire = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="tripType">Trip Type *</label>
-          <input
-            type="text"
+          <select
             id="tripType"
             value={tripType}
             onChange={(e) => setTripType(e.target.value)}
-            placeholder="Enter Trip Type"
             required
-          />
+          >
+            <option value="">Select Trip Type</option>
+            {tripTypes.map((type, index) => (
+              <option key={index} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="form-group">
           <label htmlFor="carType">Car Type *</label>
-          <input
-            type="text"
+          <select
             id="carType"
             value={carType}
             onChange={(e) => setCarType(e.target.value)}
-            placeholder="Enter Car Type"
             required
-          />
+          >
+            <option value="">Select Car Type</option>
+            {carTypes.map((type, index) => (
+              <option key={index} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="form-group">
           <label htmlFor="date">Date *</label>

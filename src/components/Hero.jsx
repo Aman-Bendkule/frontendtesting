@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/Hero.css"; // Import your custom CSS for the hero section
-import heroImage from '../assets/bg.jpg'; // Path to your hero image
+import heroImage from '../assets/nature4.jpg'; // Path to your hero image
 
 const HeroSection = () => {
   return (

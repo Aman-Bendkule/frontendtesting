@@ -1,12 +1,12 @@
 import{ useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/Testimonial.css"; // Ensure this file exists and links correctly
-
+import user1 from '../assets/user.png';
 
 const testimonials = [
-  { img: 'https://randomuser.me/api/portraits/men/1.jpg', name: 'Pratik Jadhav', text: 'Most affordable rental cars in lonavala. Neet an clean cars. Verry good travels thank you..' },
-  { img: 'https://randomuser.me/api/portraits/men/2.jpg', name: 'Avinash Desai', text: 'The service is very good, the driver is very helpful and supportive. And the price is very good' },
-  { img: 'https://randomuser.me/api/portraits/men/3.jpg', name: 'Kshitija Gaikwad', text: 'Very nice service Very good driver' },
+  { img: user1, name: 'Pratik Jadhav', text: 'Most affordable rental cars in lonavala. Neet an clean cars. Verry good travels thank you..' },
+  { img: user1, name: 'Avinash Desai', text: 'The service is very good, the driver is very helpful and supportive. And the price is very good' },
+  { img: user1, name: 'Kshitija Gaikwad', text: 'Very nice service Very good driver' },
 ];
 
 const Testimonial = () => {
