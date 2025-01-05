@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="col-md-4">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="#">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="#">Destinations</a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">Contact Us</a></li>
@@ -36,8 +36,8 @@ const Footer = () => {
               <a href="#" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
             <p className="mt-3">
-              <strong>Email:</strong> contact@travel.com<br />
-              <strong>Phone:</strong> +123 456 7890
+              <strong>Email:</strong> desaiatul456@gmail.com<br />
+              <strong>Phone:</strong> +91 8830379766
             </p>
           </div>
         </div>

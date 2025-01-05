@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/ContactForm.css";
+import { v4 as uuidv4 } from 'uuid'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,16 +15,24 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    alert("Thank you for reaching out! We’ll get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+
+    try {
+      let response = await fetch('http://localhost:3000/inTouchData',{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({...formData,id:uuidv4() })
+      });
+      if (response.ok) {
+        alert("Thank you for reaching out! We’ll get back to you soon.");
+        setFormData({name: "",email: "",subject: "",message: "",})
+      }
+    } catch (error) {
+      console.error('Error Submitting data:', error);
+    }   
+    
   };
 
   return (
@@ -37,15 +46,15 @@ const ContactForm = () => {
         </p>
         <div className="details-group">
           <h4>Address:</h4>
-          <p>123 Business Lane, Corporate City, 45678</p>
+          <p> Lonvala Vaksai, 410405</p>
         </div>
         <div className="details-group">
           <h4>Phone:</h4>
-          <p>+1 (555) 123-4567</p>
+          <p>+91 8830379766</p>
         </div>
         <div className="details-group">
           <h4>Email:</h4>
-          <p>info@yourcompany.com</p>
+          <p>desaiatul456@gmail.com</p>
         </div>
       </div>
 

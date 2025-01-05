@@ -1,0 +1,15 @@
+.banner-container {
+    width: 100%;
+    max-height: 400px; /* Adjust the max height as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}

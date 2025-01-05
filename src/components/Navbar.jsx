@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/arohitravels.png';
 import { useEffect, useState } from 'react';
@@ -52,7 +51,7 @@ const Navbar = () => {
               <Link className="nav-link" to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/rent-car">Rent Car</Link>
+              <Link className="nav-link" to="/">Contact US</Link>
             </li>
           </ul>
         </div>

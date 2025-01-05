@@ -57,6 +57,12 @@ button.submit-btn:hover {
   background-color: #0056b3;
 }
 
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .enquire-form {

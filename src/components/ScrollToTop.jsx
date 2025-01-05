@@ -1,38 +1,44 @@
-import  { useState, useEffect } from "react";
+// import { FaWhatsapp } from "react-icons/fa";
+// import "../css/ScrollToTop.css";
+
+// const ScrollToTop = () => {
+
+//   const scrollToTop = () => {
+//     // Added the correct country code prefix
+//     window.open("https://wa.me/918830379766", "_blank");
+//   };
+
+//   return (
+//     <div>
+//       <div className="scroll-to-top" onClick={scrollToTop}>
+//         <FaWhatsapp />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ScrollToTop;
+
+import { FaWhatsapp } from "react-icons/fa";
+import { Tooltip } from 'react-tooltip';
 import "../css/ScrollToTop.css";
 
 const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Show or hide the button based on scroll position
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.open("https://wa.me/918830379766", "_blank");
   };
 
   return (
     <div>
-      {isVisible && (
-        <div className="scroll-to-top" onClick={scrollToTop}>
-          ↑
-        </div>
-      )}
+      <div
+        className="scroll-to-top"
+        onClick={scrollToTop}
+        data-tooltip-id="whatsapp-tooltip"
+      >
+        <FaWhatsapp />
+      </div>
+      <Tooltip id="whatsapp-tooltip" place="top" content="Message us on WhatsApp!" />
     </div>
   );
 };

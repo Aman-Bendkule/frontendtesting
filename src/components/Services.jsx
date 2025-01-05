@@ -22,9 +22,9 @@ const servicesData = [
   },
   {
     id: 4,
-    title: "Luxury Travel",
-    description: "Experience luxury with our premium travel services.",
-    icon: "✨",
+    title: "Hotel Bookings",
+    description: "Best Hotel's Booking Through Arohi Travels with best Tieup's",
+    icon: "🏩",
   },
   {
     id: 5,
@@ -34,9 +34,9 @@ const servicesData = [
   },
   {
     id: 6,
-    title: "Corporate Travel",
-    description: "Tailored travel solutions for businesses and professionals.",
-    icon: "💼",
+    title: "local City Taxi",
+    description: "We provide Local City Taxi Service at affordable prices.",
+    icon: "🚕",
   },
 ];
 

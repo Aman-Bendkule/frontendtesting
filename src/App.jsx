@@ -17,7 +17,8 @@ import './App.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Services from './components/Services';
 import Enquire from './components/Enquire';
-
+import banner from './assets/banner.png'
+import Banner from './components/Banner';
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
                   <Packages/>
                   <Testimonial/>
                   <FAQ/>
+                  <Banner 
+        imageSrc={banner} 
+        altText="Banner Image" 
+      />
                   <ContactForm/>
                 </>
               }
