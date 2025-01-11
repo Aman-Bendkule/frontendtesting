@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 // Middleware
 const corsOptions = {
-  origin: 'https://frontend-testing-9lypr25tf-aman-bendkules-projects.vercel.app',
+  origin: 'https://frontendtesting-nine.vercel.app',
   methods: 'GET, POST',
   allowedHeaders: 'Content-Type',
 };
