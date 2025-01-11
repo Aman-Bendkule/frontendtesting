@@ -12,13 +12,18 @@ const AdminLogin = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch('https://backend-testing-jm2c.onrender.com/admin-login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password }),
-            });
+            const response = await fetch('https://frontend-testing-alpha.vercel.app/admin-login', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`, // Include if applicable
+    },
+    body: JSON.stringify({ username, password }),
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
 
-            console.log(response);
             
             if (response.ok) {
                 const { token } = await response.json();
