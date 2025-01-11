@@ -14,20 +14,19 @@ const corsOptions = {
     origin: (origin, callback) => {
         const allowedOrigins = [
             'https://frontend-testing-alpha.vercel.app',
-            'https://frontend-testing-9dijtozi7-aman-bendkules-projects.vercel.app'
+            'https://frontend-testing-8hq729j67-aman-bendkules-projects.vercel.app'
         ];
-        if (allowedOrigins.includes(origin) || !origin) {
+        if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
         }
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
-
 app.use(cors(corsOptions));
-
+app.options('*', cors(corsOptions));
 app.use(bodyParser.json());
 
 // MongoDB Configuration
