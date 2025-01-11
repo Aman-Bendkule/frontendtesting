@@ -16,13 +16,12 @@ const AdminLogin = () => {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`, // Include if applicable
     },
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ username: 'admin', password: '1234' }),
 })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
 
             
             if (response.ok) {
