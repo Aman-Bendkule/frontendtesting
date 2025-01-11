@@ -115,8 +115,8 @@ const Packages = () => {
                     </li>
                   ))}
                 </ul>
-                {/* <button className="btn btn-primary mt-4" to='/enquire'>Book Now</button> */}
-                <Link to="/enquire" className="btn btn-primary mt-4">Book Now</Link>
+                {/* <button className="btn btn-primary mt-4">Book Now</button> */}
+                <Link to='/enquire' className="btn btn-primary mt-4">Book Now</Link>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <img className="logo" src={logo} alt="Arohi Travels Logo" />
+        <img className="logoimg" src={logo} alt="Arohi Travels Logo" />
         <button 
           className="navbar-toggler" 
           type="button" 

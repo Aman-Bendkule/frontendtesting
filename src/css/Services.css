@@ -7,15 +7,13 @@
 
 .services-heading {
   font-size: 2.5rem;
-  /* font-weight: bold; */
   margin-bottom: 30px;
-  /* color: #007bff; */
 }
 
-/* Staggered Grid for Unique Layout */
+/* Fixed 3x2 Grid Layout */
 .services-staggered-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Fixed to ensure a 3-column layout */
   gap: 20px;
 }
 
@@ -43,23 +41,33 @@
 .service-icon {
   font-size: 4rem;
   margin-bottom: 15px;
-  color: inherit; /* Adapts to the highlighted card */
+  color: inherit;
 }
 
 .service-title {
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: inherit; /* Adapts to the highlighted card */
+  color: inherit;
 }
 
 .service-description {
   font-size: 1rem;
-  color: inherit; /* Adapts to the highlighted card */
+  color: inherit;
 }
 
 /* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .services-staggered-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
 @media (max-width: 768px) {
+  .services-staggered-grid {
+    grid-template-columns: repeat(1, 1fr); /* Stack vertically on smaller screens */
+  }
+
   .services-heading {
     font-size: 2rem;
   }

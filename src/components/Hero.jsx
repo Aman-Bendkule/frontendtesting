@@ -8,7 +8,9 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-title">Welcome to Arohi Travels</h1>
         <p className="hero-subtitle">Explore the Heart of Maharashtra with Arohi Travels </p>
+        <a href="/enquire">
         <button className="hero-button">Book Now</button>
+        </a>
       </div>
     </div>
   );

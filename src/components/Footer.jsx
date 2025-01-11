@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom text-center py-3">
-        <p className="m-0">© 2024 Arohi Travels. All Rights Reserved.</p>
+        <p className="m-0">© 2025 Arohi Travels. All Rights Reserved.</p>
       </div>
     </footer>
   );
