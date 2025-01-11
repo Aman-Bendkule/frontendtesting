@@ -14,7 +14,7 @@ const corsOptions = {
     origin: (origin, callback) => {
         const allowedOrigins = [
             'https://frontend-testing-alpha.vercel.app',
-            'https://frontend-testing-8hq729j67-aman-bendkules-projects.vercel.app'
+            'https://frontend-testing-8hq729j67-aman-bendkules-projects.vercel.app',
         ];
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
@@ -25,6 +25,7 @@ const corsOptions = {
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
+
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 app.use(bodyParser.json());
