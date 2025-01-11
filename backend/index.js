@@ -5,10 +5,6 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 
-require('dotenv').config();
-const app = express();
-const port = process.env.PORT || 3000;
-
 // Middleware
 const corsOptions = {
   origin: 'https://frontend-testing-9lypr25tf-aman-bendkules-projects.vercel.app',
@@ -17,6 +13,11 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+require('dotenv').config();
+const app = express();
+const port = process.env.PORT || 3000;
+
+
 app.use(bodyParser.json());
 
 // MongoDB Configuration
