@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
+Disallow: /private/
+Allow: /public/
 Crawl-delay: 5
-Disallow: /cgi-bin/
