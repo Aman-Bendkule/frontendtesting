@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../assets/arohitravels.png';
+import logo from '../assets/arohitravels.webp';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import "../css/Navbar.css";
