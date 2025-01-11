@@ -12,16 +12,11 @@ const AdminLogin = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch('https://frontend-testing-alpha.vercel.app/admin-login', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ username: 'admin', password: '1234' }),
-})
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.error(err));
+            const response = await fetch('http://localhost:3000/admin-login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
 
             
             if (response.ok) {
