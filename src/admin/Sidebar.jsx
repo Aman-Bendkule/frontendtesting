@@ -1,11 +1,29 @@
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import './Sidebar.css';
+
+// const Sidebar = () => {
+//     return (
+//         <div className="sidebar">
+//             <h2>Admin Panel</h2>
+//             <Link to="/dashboard/contact">Contact by User</Link>
+//             <Link to="/dashboard/enquire">Enquire by User</Link>
+//             <Link to="/">Home</Link>
+
+//         </div>
+//     );
+// };
+
+// export default Sidebar;
+
+
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  
+
   // Close sidebar if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -31,7 +49,7 @@ const Sidebar = () => {
     // Clear the token from localStorage
     localStorage.removeItem('adminToken');
     // Redirect to login page
-    navigate('/');
+    navigate('/admin-login');
   };
 
   const isAuthenticated = localStorage.getItem('adminToken'); // Check if the token exists
@@ -55,7 +73,7 @@ const Sidebar = () => {
         <h2>Admin Panel</h2>
         <Link to="/dashboard/contact">Contact by User</Link>
         <Link to="/dashboard/enquire">Enquire by User</Link>
-        <Link onClick={handleHomeClick}>Home</Link>
+        <Link onClick={handleHomeClick}>Logout</Link>
       </div>
     </div>
   );
