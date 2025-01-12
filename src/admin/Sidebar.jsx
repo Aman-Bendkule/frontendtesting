@@ -49,7 +49,7 @@ const Sidebar = () => {
     // Clear the token from localStorage
     localStorage.removeItem('adminToken');
     // Redirect to login page
-    navigate('/admin-login');
+    navigate('https://frontendtesting-nine.vercel.app/');
   };
 
   const isAuthenticated = localStorage.getItem('adminToken'); // Check if the token exists
