@@ -20,7 +20,7 @@ const ContactForm = () => {
     console.log("Form Submitted:", formData);
 
     try {
-      let response = await fetch('http://localhost:3000/inTouchData',{
+      let response = await fetch('https://backend-testing-wkft.onrender.com/inTouchData',{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({...formData,id:uuidv4() })

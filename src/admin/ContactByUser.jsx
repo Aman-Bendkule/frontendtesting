@@ -3,17 +3,28 @@ import React, { useEffect, useState } from 'react';
 import './ContactByUser.css';
 
 const ContactByUser = () => {
+<<<<<<< HEAD
   const [contactData, setContactData] = useState(null);
+=======
+>>>>>>> 09abc5ae09eb15dac00eec5755f56c38a46f1f9f
 
   const getContactData = async () => {
     const token = localStorage.getItem('adminToken');
 
     try {
+<<<<<<< HEAD
       const response = await fetch('http://localhost:3000/contact-data', {
         headers: {
           'Authorization': token,
         },
       });
+=======
+        const response = await fetch('https://backend-testing-wkft.onrender.com/contact-data', {
+            headers: {
+                'Authorization': token,
+            },
+        });
+>>>>>>> 09abc5ae09eb15dac00eec5755f56c38a46f1f9f
 
       if (response.ok) {
         const data = await response.json();

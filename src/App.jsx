@@ -54,6 +54,7 @@ const Layout = ({ children }) => {
 };
 
 function App() {
+<<<<<<< HEAD
     return (
         <Router>
             <div className="app-container">
@@ -97,6 +98,44 @@ function App() {
             </div>
         </Router>
     );
+=======
+  return (
+    <Router>
+      <div className="app-container">
+        <Routes>
+          {/* Routes with Navbar and Footer */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Hero />
+                <Services />
+                <Destination />
+                <TravelInfo />
+                <Packages />
+                <Testimonial />
+                <FAQ />
+                <Banner imageSrc={banner} altText="Banner Image" />
+                <ContactForm />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/rent-car" element={<><Navbar /><RentCar /><Footer /></>} />
+          <Route path="/about" element={<><Navbar /><About /><Footer /></>} />
+          <Route path="/enquire" element={<><Navbar /><Enquire /><Footer /></>} />
+          
+          {/* Admin routes without Navbar and Footer */}
+          <Route path="/dashboard/*" element={<AdminDashboard />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+        </Routes>
+        
+        <ScrollToTop />
+      </div>
+    </Router>
+  );
+>>>>>>> 09abc5ae09eb15dac00eec5755f56c38a46f1f9f
 }
 
 export default App;

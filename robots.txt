@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
 Crawl-delay: 5
 Disallow: /cgi-bin/
+=======
+User-agent: *
+Disallow: /private/
+Allow: /public/
+Crawl-delay: 5
+>>>>>>> 09abc5ae09eb15dac00eec5755f56c38a46f1f9f

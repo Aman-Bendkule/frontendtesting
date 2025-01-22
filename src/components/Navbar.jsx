@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/arohitravels.png';
+=======
+import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../assets/arohitravels.webp';
+>>>>>>> 09abc5ae09eb15dac00eec5755f56c38a46f1f9f
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import "../css/Navbar.css";

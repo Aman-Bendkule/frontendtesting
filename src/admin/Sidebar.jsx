@@ -32,7 +32,7 @@ const Sidebar = () => {
     // Clear the token from localStorage
     localStorage.removeItem('adminToken');
     // Redirect to login page
-    navigate('/');
+    navigate('https://frontendtesting-nine.vercel.app/');
   };
 
   const isAuthenticated = localStorage.getItem('adminToken'); // Check if the token exists
@@ -56,7 +56,7 @@ const Sidebar = () => {
         <h2>Admin Panel</h2>
         <Link to="/dashboard/contact">Contact by User</Link>
         <Link to="/dashboard/enquire">Enquire by User</Link>
-        <Link onClick={handleHomeClick}>Home</Link>
+        <Link onClick={handleHomeClick}>Logout</Link>
       </div>
     </div>
   );

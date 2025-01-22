@@ -9,7 +9,7 @@ const EnquireByUser = () => {
         const token = localStorage.getItem('adminToken');
     
         try {
-          let response = await fetch('http://localhost:3000/enquiry-data',{
+          let response = await fetch('https://backend-testing-wkft.onrender.com/enquiry-data',{
             headers: {
                     'Authorization': token,
                 },

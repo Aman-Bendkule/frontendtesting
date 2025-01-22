@@ -4,14 +4,25 @@ const { MongoClient } = require('mongodb');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
+<<<<<<< HEAD
 const compression = require('compression');
+=======
+
+// Middleware
+const corsOptions = {
+  origin: 'https://frontendtesting-nine.vercel.app',
+  methods: 'GET, POST',
+  allowedHeaders: 'Content-Type',
+};
+
+app.use(cors(corsOptions));
+>>>>>>> 09abc5ae09eb15dac00eec5755f56c38a46f1f9f
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
+
 app.use(bodyParser.json());
 
 app.use(compression());
