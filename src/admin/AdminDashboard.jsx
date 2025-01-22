@@ -9,8 +9,12 @@ const AdminDashboard = () => {
     console.log(`dashboard`);
     
     return (
+        <>
+        <h1 style={{ marginLeft: '20rem' }}>Welcome To Admin Dashboard</h1>
+        <h3 style={{ marginLeft: '50rem' }}>Manage The Details</h3>
         <div style={{ display: 'flex' }}>
             <Sidebar />
+            
             <div>
                 <Routes>
                     <Route path="contact" element={<ContactByUser />} />
@@ -18,6 +22,8 @@ const AdminDashboard = () => {
                 </Routes> 
             </div>
         </div>
+        </>
+        
     );
 };
 

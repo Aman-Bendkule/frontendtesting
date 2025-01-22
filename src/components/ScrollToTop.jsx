@@ -1,23 +1,4 @@
-// import { FaWhatsapp } from "react-icons/fa";
-// import "../css/ScrollToTop.css";
 
-// const ScrollToTop = () => {
-
-//   const scrollToTop = () => {
-//     // Added the correct country code prefix
-//     window.open("https://wa.me/918830379766", "_blank");
-//   };
-
-//   return (
-//     <div>
-//       <div className="scroll-to-top" onClick={scrollToTop}>
-//         <FaWhatsapp />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ScrollToTop;
 
 import { FaWhatsapp } from "react-icons/fa";
 import { Tooltip } from 'react-tooltip';

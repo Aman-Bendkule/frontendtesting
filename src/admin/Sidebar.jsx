@@ -1,28 +1,11 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import './Sidebar.css';
 
-// const Sidebar = () => {
-//     return (
-//         <div className="sidebar">
-//             <h2>Admin Panel</h2>
-//             <Link to="/dashboard/contact">Contact by User</Link>
-//             <Link to="/dashboard/enquire">Enquire by User</Link>
-//             <Link to="/">Home</Link>
-
-//         </div>
-//     );
-// };
-
-// export default Sidebar;
-
-
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import  { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Close sidebar if clicked outside
   useEffect(() => {

@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/arohitravels.png';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <img className="logoimg" src={logo} alt="Arohi Travels Logo" />
+        <img className="logoimg" src={logo} alt="Arohi Travels Logo"  />
         <button 
           className="navbar-toggler" 
           type="button" 

@@ -41,12 +41,13 @@
   
   .details-group h4 {
     font-size: 1rem;
-    color: #feffff;
+    color: #040404;
+    font-weight: 530;
   }
   
   .details-group p {
     font-size: 0.9rem;
-    color: #333;
+    color: #ffffff;
   }
   
   /* Contact Form Section */

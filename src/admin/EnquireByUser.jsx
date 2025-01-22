@@ -35,8 +35,11 @@ const EnquireByUser = () => {
     return (
         <div className="enquire-container">
             <h2>Enquire by User</h2>
-            {enquiryData ?
-            
+            {enquiryData ?(
+             <>
+             <div className="total-count">
+               <h4>Total Enquire: {enquiryData.length}</h4>
+             </div>
             <div className="table-wrapper">
                 <table className="responsive-table">
                     <thead>
@@ -59,7 +62,8 @@ const EnquireByUser = () => {
                     </tbody>
                 </table>
             </div>
-            :<h5>No Data Available</h5>}
+             </>
+            ):(<h5>No Data Available</h5>)}
         </div>
     );
 };

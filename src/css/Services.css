@@ -88,3 +88,52 @@
     font-size: 0.9rem;
   }
 }
+
+
+
+
+/* Add animation classes */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  opacity: 0; /* Start with invisible cards */
+}
+
+.service-card.visible {
+  animation: slideUp 0.6s forwards; /* Default animation for entering from bottom */
+}
+
+.service-card.up-scroll {
+  animation: slideDown 0.6s forwards; /* Animation for scrolling up */
+}
+
+.service-card.down-scroll {
+  animation: slideUp 0.6s forwards; /* Animation for scrolling down */
+}

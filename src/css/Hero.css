@@ -1,89 +1,94 @@
 /* HeroSection.css */
 .hero-section {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem; /* Add padding for spacing on smaller screens */
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; /* Add padding for spacing on smaller screens */
+}
 
+.hero-content {
+  position: absolute;
+  text-align: center;
+  color: white; /* Ensure text stands out on the dark background */
+  z-index: 1; /* Ensures text is above the image */
+  width: 100%; /* Make sure the content covers the full width */
+  opacity: 0; /* Start hidden */
+  animation: slide-up 1s ease-out forwards; /* Add slide-up animation */
+}
+
+/* Slide-up animation */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
   }
-  
-  .hero-content {
-    position: absolute;
-    text-align: center;
-    color: white; /* Ensure text stands out on the dark background */
-    z-index: 1; /* Ensures text is above the image */
-    width: 100%; /* Make sure the content covers the full width */
-    
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+}
+
+.hero-title {
+  font-size: 7rem; /* Adjust for smaller screens */
+  font-family: 'Playfair Display', serif; /* Use Playfair Display font */
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Enhanced shadow for 3D effect */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem; /* Adjust for smaller screens */
+  font-family: 'Lato', sans-serif; /* Use Lato font */
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Enhanced shadow for 3D effect */
+}
+
+.hero-button {
+  margin-top: 2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: #003ca0; /* Your preferred button color */
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds shadow to enhance 3D effect */
+}
+
+.hero-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-5px) perspective(500px) translateZ(5px); /* Slight lift for 3D effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds more depth */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
   .hero-title {
-    font-size: 7rem; /* Adjust for smaller screens */
-    font-family: 'Playfair Display', serif; /* Use Playfair Display font */
-    margin: 0;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Enhanced shadow for 3D effect */
-    transform: perspective(500px) translateZ(0); /* Basic 3D effect */
+    font-size: 2.5rem; /* Adjust on smaller screens */
   }
-  
   .hero-subtitle {
-    font-size: 1.5rem; /* Adjust for smaller screens */
-    font-family: 'Lato', sans-serif; /* Use Lato font */
-    margin: 0;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Enhanced shadow for 3D effect */
-  transform: perspective(500px) translateZ(0); /* Basic 3D effect */
+    font-size: 1.25rem; /* Adjust on smaller screens */
   }
-  
   .hero-button {
-    margin-top: 2rem;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 15px;
-    background-color: #003ca0; /* Your preferred button color */
-    color: white;
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds shadow to enhance 3D effect */
-    transform: perspective(500px) translateZ(0); /* Basic 3D effect */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 1.2rem; /* Adjust font size for readability */
   }
-  
-  .hero-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: translateY(-5px) perspective(500px) translateZ(5px); /* Slight lift for 3D effect */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds more depth */
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem; /* Adjust on smaller screens */
   }
-
-
-
-
-  /* Media Queries for Responsive Design */
-  @media (max-width: 768px) { /* Tablet Portrait */
-    .hero-title {
-      font-size: 2.5rem; /* Adjust on smaller screens */
-    }
-    .hero-subtitle {
-      font-size: 1.25rem; /* Adjust on smaller screens */
-    }
-    .hero-button {
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-        font-size: 1.2rem; /* Adjust font size for readability */
-      }
+  .hero-subtitle {
+    font-size: 1rem; /* Adjust on smaller screens */
   }
-  
-  @media (max-width: 576px) { /* Mobile Portrait */
-    .hero-title {
-      font-size: 2rem; /* Adjust on smaller screens */
-    }
-    .hero-subtitle {
-      font-size: 1rem; /* Adjust on smaller screens */
-    }
-    .hero-button {
-        padding: 6px 12px; /* Adjust padding further for very small screens */
-        font-size: 1rem; /* Adjust font size for readability */
-      }
+  .hero-button {
+    padding: 6px 12px; /* Adjust padding further for very small screens */
+    font-size: 1rem; /* Adjust font size for readability */
   }
-  
+}
